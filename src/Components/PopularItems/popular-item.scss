@@ -1,0 +1,25 @@
+.popular_item_cover {
+  width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+  .text_cover {
+    h2 {
+      font-size: 60px;
+      color: #0b1c39;
+      line-height: 1.5;
+    }
+    p {
+      width: 980px;
+      font-size: 20px;
+      line-height: 1.5;
+      margin: 0 auto;
+    }
+  }
+
+  .single_cover {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+}

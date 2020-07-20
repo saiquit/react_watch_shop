@@ -1,0 +1,19 @@
+.shop_cover {
+  height: 400px;
+  text-align: center;
+  background-image: url("https://i.ibb.co/LRvjnZH/about-hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    line-height: 400px;
+    font-size: 80px;
+  }
+}
+.products_cover {
+  display: flex;
+  width: 1180px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

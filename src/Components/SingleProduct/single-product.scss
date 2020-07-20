@@ -1,0 +1,27 @@
+.single_product_cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 28px;
+    color: #0b1c39;
+    line-height: 1.5;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 auto;
+    font-family: "Josefin Sans", sans-serif;
+    color: red;
+  }
+  button {
+    padding: 10px 0;
+    font-size: 17px;
+    border-radius: 0;
+    border: none;
+    background-color: #f81f1f;
+    color: white;
+    margin: 15px 0;
+  }
+}
