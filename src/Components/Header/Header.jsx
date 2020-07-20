@@ -1,13 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import "./header.scss";
 
+import CartSidebar from "../../Components/CartSideBar/CartSideBar";
+
 function Header() {
+  const [show, setShow] = useState(false);
+  const toggleSideBar = () => {
+    setShow((state) => !state);
+  };
   return (
     <div className="header_cover">
-      <div className="brand">
+      <Link className="brand" to="/">
         <img src="./assets/images/logo.png" alt="Logo of the Website" />
-      </div>
+      </Link>
       <div className="links">
         <ul>
           <li>
@@ -21,9 +27,9 @@ function Header() {
       <div className="icons">
         <ul>
           <li>
-            <NavLink to="/cart">
-              <i className="fa fa-shopping-cart"></i>
-            </NavLink>
+            <div>
+              <i className="fa fa-shopping-cart" onClick={toggleSideBar}></i>
+            </div>
           </li>
           <li>
             <NavLink to="account">
@@ -37,6 +43,7 @@ function Header() {
           </li>
         </ul>
       </div>
+      {show && <CartSidebar toggleSideBar={toggleSideBar} />}
     </div>
   );
 }
