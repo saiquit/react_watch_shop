@@ -1,11 +1,7 @@
 .sidebar_cover {
   display: flex;
-  position: fixed;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.363);
-  height: 100vh;
-  top: 0;
-  right: 0;
+  position: relative;
+  min-height: 100vh;
   .side_bar_left {
     flex-basis: 60%;
   }
@@ -13,12 +9,24 @@
     flex-basis: 40%;
     background: white;
     .header_text {
-      margin: 30px 10px;
+      padding: 30px 10px;
       display: flex;
       justify-content: space-around;
+      background: black;
+      color: white;
       span {
         cursor: pointer;
       }
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll !important;
+  background: rgba(0, 0, 0, 0.363);
 }

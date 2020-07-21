@@ -1,0 +1,14 @@
+.cart_item_cover {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.438);
+  margin: 0 auto;
+  .product_img {
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}

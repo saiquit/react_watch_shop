@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./header.scss";
+import { connect } from "react-redux";
 
 import CartSidebar from "../../Components/CartSideBar/CartSideBar";
 
-function Header() {
+function Header({ itemCount }) {
   const [show, setShow] = useState(false);
   const toggleSideBar = () => {
     setShow((state) => !state);
@@ -28,7 +29,9 @@ function Header() {
         <ul>
           <li>
             <div>
-              <i className="fa fa-shopping-cart" onClick={toggleSideBar}></i>
+              <i className="fa fa-shopping-cart" onClick={toggleSideBar}>
+                <span className="cart_count">{itemCount}</span>
+              </i>
             </div>
           </li>
           <li>
@@ -48,4 +51,8 @@ function Header() {
   );
 }
 
-export default Header;
+const mapStateToProps = ({ cart: { cart } }) => ({
+  itemCount: cart.reduce((accuValue, cart) => accuValue + cart.quantity, 0),
+});
+
+export default connect(mapStateToProps)(Header);

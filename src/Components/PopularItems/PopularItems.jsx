@@ -17,8 +17,8 @@ function PopularItems() {
       </div>
 
       <div className="single_cover">
-        {shopData.map(({ id, ...otherProps }) => (
-          <SingleProduct key={id} {...otherProps} />
+        {shopData.map((item) => (
+          <SingleProduct key={item.id} item={item} />
         ))}
       </div>
     </div>
