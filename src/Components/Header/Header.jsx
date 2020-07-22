@@ -52,7 +52,10 @@ function Header({ itemCount }) {
 }
 
 const mapStateToProps = ({ cart: { cart } }) => ({
-  itemCount: cart.reduce((accuValue, cart) => accuValue + cart.quantity, 0),
+  itemCount: cart.reduce(
+    (accuValue, cartItem) => accuValue + cartItem.quantity,
+    0,
+  ),
 });
 
 export default connect(mapStateToProps)(Header);

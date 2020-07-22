@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 // components
 import HomePage from "./Pages/Home/Home";
 import ShopPage from "./Pages/Shop/ShopPage";
+import CheckOutPage from "./Pages/CheckOutPage/CheckoutPage";
 // Pages
 import Header from "./Components/Header/Header";
 
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/shop" component={ShopPage} exact />
+        <Route path="/checkout" component={CheckOutPage} exact />
       </Switch>
     </div>
   );

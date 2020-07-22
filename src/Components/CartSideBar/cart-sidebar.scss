@@ -6,6 +6,7 @@
     flex-basis: 65%;
   }
   .side_bar_right {
+    position: relative;
     flex-basis: 35%;
     background: white;
     .header_text {
@@ -29,4 +30,30 @@
   height: 100vh;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.363);
+}
+.cart_sidebar_footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  a {
+    flex-basis: 50%;
+    button {
+      padding: 25px 25px;
+      width: 50%;
+      font-size: 17px;
+      border-radius: 0;
+      border: none;
+      background-color: #f81f1f;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  h2 {
+    flex-basis: 50%;
+    color: white;
+    justify-self: center;
+    align-self: center;
+  }
 }
