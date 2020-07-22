@@ -13,7 +13,33 @@
 .products_cover {
   display: flex;
   width: 1180px;
-  margin: 0 auto;
+  margin: 50px auto;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.filters {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+
+  button {
+    border: none;
+    margin: 0 25px;
+    padding: 18px 29px;
+    background: #4a4a4b;
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    border: none;
+    &:hover {
+      background: red;
+      border: none;
+    }
+    &:focus {
+      border: none;
+    }
+    &:checked {
+      border: none;
+    }
+  }
 }

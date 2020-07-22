@@ -11,4 +11,23 @@
       height: 50%;
     }
   }
+  .cart_details {
+    display: flex;
+    flex-direction: column;
+    .remove_button {
+      align-self: self-end;
+      cursor: pointer;
+    }
+    h3 {
+      line-height: 1.3;
+      margin: 15px 0;
+    }
+  }
+}
+
+.quantity_btn {
+  padding: 8px;
+  margin: 0 5px;
+  border: 0.5px solid gray;
+  cursor: pointer;
 }
