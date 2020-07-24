@@ -1,0 +1,26 @@
+.search_bar {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  padding: 25px;
+  background: rgba(70, 70, 70, 0.932);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+  }
+  input {
+    padding: 20px;
+    border: none;
+    width: 30rem;
+  }
+}

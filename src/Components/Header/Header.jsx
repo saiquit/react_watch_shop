@@ -2,13 +2,18 @@ import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./header.scss";
 import { connect } from "react-redux";
+import SearchBar from "../SearchBar/SearchBar";
 
 import CartSidebar from "../../Components/CartSideBar/CartSideBar";
 
 function Header({ itemCount }) {
   const [show, setShow] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const toggleSideBar = () => {
     setShow((state) => !state);
+  };
+  const toggleSearchBar = () => {
+    setShowSearch(!showSearch);
   };
   return (
     <div className="header_cover">
@@ -40,13 +45,14 @@ function Header({ itemCount }) {
             </NavLink>
           </li>
           <li>
-            <NavLink to="search">
+            <div to="search" onClick={toggleSearchBar}>
               <i className="fa fa-search"></i>
-            </NavLink>
+            </div>
           </li>
         </ul>
       </div>
       {show && <CartSidebar toggleSideBar={toggleSideBar} />}
+      {showSearch && <SearchBar toggleSearchBar={toggleSearchBar} />}
     </div>
   );
 }

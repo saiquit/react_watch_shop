@@ -16,6 +16,10 @@
   margin: 50px auto;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 786px) {
+    width: 100vw;
+    padding: 0 60px;
+  }
 }
 .filters {
   margin: 25px auto;

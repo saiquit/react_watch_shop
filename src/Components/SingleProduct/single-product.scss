@@ -16,7 +16,7 @@
     color: red;
   }
   button {
-    padding: 10px 0;
+    padding: 15px 0;
     font-size: 17px;
     border-radius: 0;
     border: none;
@@ -24,5 +24,11 @@
     color: white;
     margin: 15px 0;
     cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 }

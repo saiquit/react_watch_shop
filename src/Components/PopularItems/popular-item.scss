@@ -2,6 +2,10 @@
   width: 1180px;
   margin: 0 auto;
   text-align: center;
+  @media screen and (max-width: 786px) {
+    width: 100vw;
+    padding: 0px 60px;
+  }
   .text_cover {
     h2 {
       font-size: 60px;
