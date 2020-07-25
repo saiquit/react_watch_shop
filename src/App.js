@@ -6,6 +6,7 @@ import HomePage from "./Pages/Home/Home";
 import ShopPage from "./Pages/Shop/ShopPage";
 import CheckOutPage from "./Pages/CheckOutPage/CheckoutPage";
 import AccountPage from "./Pages/AccountPage/AccountPage";
+import SingleProduct from "./Pages/SingleProduct/SingleProductPage";
 // Pages
 import Header from "./Components/Header/Header";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/shop" component={ShopPage} exact />
         <Route path="/checkout" component={CheckOutPage} exact />
         <Route path="/account" component={AccountPage} exact />
+        <Route path="/shop/:id" component={SingleProduct} exact />
       </Switch>
     </div>
   );

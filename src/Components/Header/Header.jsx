@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./header.scss";
 import { connect } from "react-redux";
@@ -9,14 +9,28 @@ import CartSidebar from "../../Components/CartSideBar/CartSideBar";
 function Header({ itemCount }) {
   const [show, setShow] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [sticky, setSticky] = useState(false);
+
+  const addSticky = () => {
+    window.scrollY > 200 ? setSticky(true) : setSticky(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", addSticky);
+    return () => {
+      window.removeEventListener("scroll", () => addSticky);
+    };
+  }, []);
+
   const toggleSideBar = () => {
     setShow((state) => !state);
   };
   const toggleSearchBar = () => {
     setShowSearch(!showSearch);
   };
+
   return (
-    <div className="header_cover">
+    <div className={`header_cover ${sticky ? "sticky" : null}`}>
       <Link className="brand" to="/">
         <img src="./assets/images/logo.png" alt="Logo of the Website" />
       </Link>

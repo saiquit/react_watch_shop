@@ -12,6 +12,9 @@ function ShopPage() {
   const sortByPrice = () => {
     setWatches((state) => state.slice(0).sort((a, b) => b.price - a.price));
   };
+  const sortByLowPrice = () => {
+    setWatches((state) => state.slice(0).sort((a, b) => a.price - b.price));
+  };
 
   return (
     <>
@@ -20,7 +23,7 @@ function ShopPage() {
       </div>
       <div className="filters">
         <button onClick={sortByPrice}>Price High To Low</button>
-        <button onClick={sortByPrice}>Most Popular</button>
+        <button onClick={sortByLowPrice}>Price Low To High</button>
       </div>
       <div className="products_cover">
         {watches.map((item) => (

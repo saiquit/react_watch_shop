@@ -44,3 +44,12 @@
   font-weight: 400;
   font-family: "Josefin Sans", sans-serif;
 }
+.sticky {
+  background: white;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  -webkit-box-shadow: 0px 10px 48px -8px rgba(0, 0, 0, 0.77);
+  -moz-box-shadow: 0px 10px 48px -8px rgba(0, 0, 0, 0.77);
+  box-shadow: 0px 10px 48px -8px rgba(0, 0, 0, 0.77);
+}
